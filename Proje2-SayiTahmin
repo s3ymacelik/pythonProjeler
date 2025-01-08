@@ -1,0 +1,18 @@
+import random
+
+hedef_sayi = random.randint(1, 100)
+deneme_sayisi = 0
+
+print("1 ile 100 arasında bir sayı tuttum. Tahmin etmek ister misin? :)")
+
+while True:
+    tahmin = int(input("Tahmininiz: "))
+    deneme_sayisi += 1
+
+    if tahmin < hedef_sayi:
+        print("Tahminin, tuttuğum sayıdan daha küçük bir sayı, tekrar deneyebilirsin :)")
+    elif tahmin > hedef_sayi:
+        print("Tahminin, tuttuğum sayıdan daha büyük bir sayı, tekrar deneyebilirsin :)")
+    else:
+        print(f"{hedef_sayi} sayısını {deneme_sayisi} denemede buldunuz.")
+        break

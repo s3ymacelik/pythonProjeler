@@ -1,0 +1,21 @@
+sayi1 = float(input("Birinci sayıyı giriniz : "))
+islemturu = input("İşlem türünü giriniz (+,-,*,/) : ")
+sayi2 = float(input("İkinci sayıyı giriniz : "))
+
+if islemturu == "+":
+    sonuc = sayi1 + sayi2
+    print(sonuc)
+elif islemturu == "-":
+    sonuc = sayi1 - sayi2
+    print(sonuc)
+elif islemturu == "*":
+    sonuc = sayi1 * sayi2
+    print(sonuc)
+elif islemturu == "/":
+    try:
+        sonuc = sayi1/sayi2
+        print(sonuc)
+    except ZeroDivisionError:
+        print("Bölüm değeri 0'a eşit olamaz.")
+else:
+    print("Geçersiz işlem türü") 

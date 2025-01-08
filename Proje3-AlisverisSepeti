@@ -1,0 +1,24 @@
+urun_listesi = ["elma", "muz", "çikolata", "su", "ekmek","portakal"]
+sepet = []
+
+print("Mevcut ürünler:")
+for urun in urun_listesi:
+    print(f"- {urun}")
+
+print("\nAlışverişe başlayabilirsiniz, lütfen sepetinizi tamamladığınızda 'bitti' yazınız.")
+
+while True:
+    secim = input("Sepete eklemek istediğiniz ürün: ").lower()
+
+    if secim == "bitti":
+        break
+
+    if secim in urun_listesi:
+        sepet.append(secim)
+        print(f"{secim} sepete eklendi.")
+    else:
+        print("Üzgünüm, bu ürün listede yok. Lütfen geçerli bir ürün seçin.")
+
+print("\n Sepetiniz :")
+for urun in sepet:
+    print(f"- {urun}")
